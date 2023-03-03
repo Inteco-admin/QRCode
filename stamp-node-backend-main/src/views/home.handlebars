@@ -1,0 +1,45 @@
+<div class='container'>
+  <p class='title'>Статус</p>
+  {{#if isLastVersion}}
+    <div class='relevant'>
+      Актуален
+    </div>
+  {{else}}
+    <div class='notRelevant'>
+      Не актуален
+    </div>
+  {{/if}}
+  <p class='title'>Информация о документе</p>
+  <div class='row'>
+    <span class='text'>Имя документа:</span>
+    <span class='data'>{{documentName}}</span>
+  </div>
+  <div class='row'>
+    <span class='text'>Версия:</span>
+    <span>{{documentVersion}}</span>
+  </div>
+  <div class='row'>
+    <span class='text'>Дата создания:</span>
+    <span>{{documentCreateTime}}</span>
+  </div>
+  <a class='button' target='_blank' href={{documentLink}}>
+    Открыть документ в BIM360
+  </a>
+  <p class='title'>Информация о согласовании</p>
+  <div class='row'>
+    <span class='text'>Должность:</span>
+    <span class='data'>{{jobTitle}}</span>
+  </div>
+  <div class='row'>
+    <span class='text'>ФИО:</span>
+    <span class='data'>{{fullName}}</span>
+  </div>
+  <div class='row'>
+    <span class='text'>Дата:</span>
+    <span>{{approvalDate}}</span>
+  </div>
+  <a class='button' target='_blank' href={{reviewURL}}>
+    Открыть согласование BIM360
+  </a>
+
+</div>

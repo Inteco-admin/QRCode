@@ -1,0 +1,61 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+
+{% block submit_buttons_bottom %}
+    <script>
+      const projectId = document.getElementById('id_adsk_id').value
+      const url = `https://stamp.sminex.com/api/projects/${projectId}/webhooks`
+      const customMessageId = "customMessage"
+
+      async function enableHook() {
+        const loadingMessage = document.getElementById(customMessageId)
+        try {
+          loadingMessage.style.display = 'block';
+          let response = await fetch(url, {
+            method: 'POST',
+          });
+
+          if (response.ok) {
+            alert("Хуки для проекта успешно созданы!");
+            loadingMessage.style.display = 'none';
+          } else if (response.status === 409) {
+            alert("К проекту уже подключены хуки. Если вы хотите переназначить хуки, сначала удалите их.");
+            loadingMessage.style.display = 'none';
+          } else {
+            alert("Ошибка при создании хуков! Обратитесь к администрутору");
+            loadingMessage.style.display = 'none';
+          }
+        } catch (e) {
+            alert("Ошибка при создании хуков! Обратитесь к администрутору");
+            loadingMessage.style.display = 'none';
+        }
+      }
+
+      async function disableHook() {
+        const loadingMessage = document.getElementById(customMessageId)
+        try {
+          loadingMessage.style.display = 'block';
+          let response = await fetch(url, {
+            method: 'DELETE',
+          });
+          if (response.ok) {
+            alert("Хуки для проекта успешно удалены!");
+            loadingMessage.style.display = 'none';
+          } else {
+            alert("Ошибка при удалении хуков! Обратитесь к администрутору");
+            loadingMessage.style.display = 'none';
+          }
+        } catch (e) {
+            alert("Ошибка при удалении хуков! Обратитесь к администрутору");
+            loadingMessage.style.display = 'none';
+        }
+      }
+    </script>
+    <div class="submit-row">
+      <p id='customMessage' style="display: none">Идет загрузка...</p>
+      <input type="button" value="{% trans 'Отключить хуки' %}" style="background: var(--delete-button-bg);" name="_buttonDeleteHooks" onclick="disableHook()" />
+      <input type="button" value="{% trans 'Подключить хуки' %}" name="_buttonCreateHooks" onclick="enableHook()" />
+    </div>
+
+    {{ block.super }}
+{% endblock %}

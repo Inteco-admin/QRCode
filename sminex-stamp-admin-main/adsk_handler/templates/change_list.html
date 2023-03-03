@@ -1,0 +1,12 @@
+{% extends "admin/change_list.html" %}
+{% load i18n static %}
+
+{% block object-tools %}
+
+<form action="import/" method="POST">
+  {% csrf_token %}
+  <input type="submit" name="_import_bim360" value="Import Projects" />
+</form>
+
+{{ block.super }}
+{% endblock %}

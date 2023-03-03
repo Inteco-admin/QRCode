@@ -1,0 +1,114 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Roboto-Regular.ttf');
+  src: local('O'), url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Roboto-Medium.ttf');
+  src: local('O'), url('../fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Roboto-Bold.ttf');
+  src: local('O'), url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+p {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', ubuntu, cantarell, 'Noto Sans', sans-serif;
+}
+
+.container {
+  margin: 20px auto 0;
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 10px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.row {
+  margin-left: 20px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #9a9a9a;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.data {
+  word-break: break-all;
+}
+
+.text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #565656;
+}
+
+.button {
+  /* width: 230px; */
+  padding: 10px;
+  margin: 0 auto;
+  background: #2cab77;
+  border-radius: 7px;
+  outline: none;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+}
+
+.relevant {
+  background: #d4f3d9;
+  border-radius: 7px;
+  color: #369353;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.notRelevant {
+  background-color: #f52a2a;
+  border-radius: 7px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  /* width: 150px; */
+  padding: 10px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 300px;
+  }
+}

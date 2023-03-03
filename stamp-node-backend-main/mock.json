@@ -1,0 +1,111 @@
+{
+  "version": "1.0",
+  "resourceUrn": "urn:adsk.wipemea:fs.file:vf.no9JHvB5QUeh1zGRaJFWCQ?version=1",
+  "hook": {
+    "hookId": "5bcf7e54-58f3-4e68-80af-7289d6fd862a",
+    "tenant": "urn:adsk.wipemea:fs.folder:co.jnVlFwwlS_uhvsBbL6rPOQ",
+    "callbackUrl": "https://stamp.sminex.com/api/webhook?stamp",
+    "createdBy": "GpTz2i3gx6MG3CFoRfh2qGfIpnSzEAbA",
+    "event": "dm.version.modified",
+    "createdDate": "2023-01-25T15:08:06.084+00:00",
+    "lastUpdatedDate": "2023-01-25T15:08:06.084+00:00",
+    "system": "data",
+    "creatorType": "Application",
+    "status": "active",
+    "scope": {
+      "folder": "urn:adsk.wipemea:fs.folder:co.jnVlFwwlS_uhvsBbL6rPOQ"
+    },
+    "hookAttribute": null,
+    "autoReactivateHook": false,
+    "urn": "urn:adsk.webhooksemea:events.hook:5bcf7e54-58f3-4e68-80af-7289d6fd862a",
+    "callbackWithEventPayloadOnly": false,
+    "__self__": "/systems/data/events/dm.version.modified/hooks/5bcf7e54-58f3-4e68-80af-7289d6fd862a"
+  },
+  "payload": {
+    "ext": "pdf",
+    "modifiedTime": "2023-01-27T08:55:49+0000",
+    "lineageUrn": "urn:adsk.wipemea:dm.lineage:no9JHvB5QUeh1zGRaJFWCQ",
+    "sizeInBytes": 3986511,
+    "hidden": false,
+    "indexable": true,
+    "source": "urn:adsk.wipemea:fs.file:vf.no9JHvB5QUeh1zGRaJFWCQ?version=1",
+    "version": "1",
+    "modification_flags": "{\"newVersion\":false,\"accessDefOrScopeChange\":false,\"metadataOnly\":true}",
+    "contentURL": "urn:adsk.objects:os.object:wip.dm.emea.2/1866eda6-4278-46f7-bdf6-93f174a8ac33.pdf",
+    "user_info": {
+      "id": "VSX24ARTK88BG4A9"
+    },
+    "name": "тестовый файл Донин.pdf",
+    "context": {
+      "lineage": {
+        "reserved": false,
+        "reservedUserName": null,
+        "reservedUserId": null,
+        "reservedTime": null,
+        "unreservedUserName": null,
+        "unreservedUserId": null,
+        "unreservedTime": null,
+        "createUserId": "CU4JR4HFQJPNH6EJ",
+        "createTime": "2023-01-27T08:49:28+0000",
+        "createUserName": "Павел Донин",
+        "lastModifiedUserId": "CU4JR4HFQJPNH6EJ",
+        "lastModifiedTime": "2023-01-27T08:49:29+0000",
+        "lastModifiedUserName": "Павел Донин"
+      },
+      "operation": "UpdateCustomProperties"
+    },
+    "modifiedBy": "VSX24ARTK88BG4A9",
+    "state": "CONTENT_AVAILABLE",
+    "parentFolderUrn": "urn:adsk.wipemea:fs.folder:co.4Rq_BpqZS1aiFIe82UqQWQ",
+    "ancestors": [
+      {
+        "name": "899364b8-d74d-4c3f-9a5e-999741d40657-account-root-folder",
+        "urn": "urn:adsk.wipemea:fs.folder:co.lJAujJ8QQ2iG2NmxiA15HA"
+      },
+      {
+        "name": "47e499a5-de01-4567-b323-e59e36d8f382-root-folder",
+        "urn": "urn:adsk.wipemea:fs.folder:co.5LDurT6ZQIu8OKMw4Yjaaw"
+      },
+      {
+        "name": "Project Files",
+        "urn": "urn:adsk.wipemea:fs.folder:co.lpvU9hhGSEeVJlnU8SdZpQ"
+      },
+      {
+        "name": "01. На согласование",
+        "urn": "urn:adsk.wipemea:fs.folder:co.V86xikFPRsGnhcyVOSfUqA"
+      },
+      {
+        "name": "04. Стадия Р",
+        "urn": "urn:adsk.wipemea:fs.folder:co.jnVlFwwlS_uhvsBbL6rPOQ"
+      },
+      {
+        "name": "05. КР",
+        "urn": "urn:adsk.wipemea:fs.folder:co.g7rFsaC5RXaGUpIGMn2Hxg"
+      },
+      {
+        "name": "01. PDF",
+        "urn": "urn:adsk.wipemea:fs.folder:co.4Rq_BpqZS1aiFIe82UqQWQ"
+      }
+    ],
+    "project": "47e499a5-de01-4567-b323-e59e36d8f382",
+    "tenant": "899364b8-d74d-4c3f-9a5e-999741d40657",
+    "custom-metadata": {
+      "dm_sys_id": "d177cb98-0fcc-4d6d-bce8-73007878a1ea",
+      "file_name": "тестовый файл Донин.pdf",
+      "lineageTitle": "",
+      "dm:sourceVersionUrn": "urn:adsk.wipemea:fs.file:vf.no9JHvB5QUeh1zGRaJFWCQ?version=1",
+      "storm:review-state": "NOT_IN_REVIEW",
+      "storm:splitting-state": "NOT_SPLIT",
+      "dm_command:id": "25be4fc5-9820-4685-a769-0fa6e2958421",
+      "storm:entity-type": "SEED_FILE",
+      "storm:process-state": "PROCESSING_COMPLETE",
+      "storm:bubble-seed-urn": "urn:adsk.wipemea:fs.file:vf.no9JHvB5QUeh1zGRaJFWCQ?version=1",
+      "storm:default-viewable-guid": "b25396cd-3112-43a6-94bb-892db7339460",
+      "storm:extraction-state": "SUCCESS",
+      "dm_sys:approveState": "{\"id\":\"f44e623d-f04f-47fe-8195-efc43d1d985b\",\"label\":\"Согласовано\",\"value\":\"approved\",\"iconValue\":\"approved-check\",\"buildIn\":true,\"approverUserId\":\"CU4JR4HFQJPNH6EJ\",\"approverUserName\":\"Пользователь Тестовый\",\"reviewId\":\"bc400ddf-42d3-416d-b8a6-58b1e946ac23\",\"reviewSequenceId\":\"39\"}",
+      "storm:metadata-extraction-state": "PROCESSING_COMPLETE",
+      "dm_command:version": "2.1.0",
+      "fileName": "тестовый файл Донин.pdf"
+    }
+  }
+}

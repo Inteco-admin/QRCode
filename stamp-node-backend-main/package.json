@@ -1,0 +1,61 @@
+{
+  "name": "stamp-node-backend",
+  "version": "0.0.1",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc -p .",
+    "postbuild": "node ./build.js",
+    "prestart": "npm run build",
+    "start": "node -r ./prodConfig.js build/server.js",
+    "format": "prettier --write \"src/**/*.{js,jsx,json,css,md}\"",
+    "start:ts": "cross-env NODE_ENV=development concurrently \"npx tsc --watch\" \"npm run nodemon\"",
+    "nodemon": "nodemon -e ts,js --exec ts-node -r tsconfig-paths/register src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.sminex.com/web-bim/stamp-node-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.20.12",
+    "@babel/eslint-parser": "7.19.1",
+    "@types/node": "18.11.18",
+    "concurrently": "7.6.0",
+    "cross-env": "7.0.3",
+    "dotenv": "16.0.3",
+    "eslint": "8.33.0",
+    "nodemon": "2.0.20",
+    "ts-node": "10.9.1",
+    "tsconfig-paths": "4.1.2",
+    "typescript": "4.9.4"
+  },
+  "dependencies": {
+    "axios": "1.3.2",
+    "cors": "2.8.5",
+    "express": "4.18.2",
+    "express-handlebars": "6.0.6",
+    "morgan": "1.10.0",
+    "node-html-to-image": "3.3.0",
+    "nodemailer": "6.9.1",
+    "pdf-lib": "1.17.1",
+    "qrcode": "1.5.1",
+    "shelljs": "0.8.5",
+    "winston": "3.8.2"
+  },
+  "eslintConfig": {
+    "parser": "@babel/eslint-parser",
+    "rules": {
+      "no-restricted-globals": 0,
+      "jsx-a11y/alt-text": 0,
+      "jsx-a11y/anchor-has-content": 0,
+      "jsx-a11y/anchor-is-valid": 0,
+      "jsx-a11y/accessible-emoji": 0
+    }
+  },
+  "engines": {
+    "node": ">= 16.10.*"
+  }
+}
